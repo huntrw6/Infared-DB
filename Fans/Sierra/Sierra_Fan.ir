@@ -1,0 +1,43 @@
+Filetype: IR signals file
+Version: 1
+# Sierra tower rotating fan
+# 
+# 
+# Power toggle (on - off)
+name: Power
+type: raw
+frequency: 38000
+duty_cycle: 0.330000
+data: 9201 4508 615 530 613 529 615 529 614 528 615 529 614 530 613 531 613 530 614 1639 613 1638 614 1638 614 1638 614 1638 614 1638 614 1639 613 1638 614 1638 614 531 612 1639 613 530 614 1639 613 529 614 531 613 530 614 530 614 1638 614 530 614 1637 615 529 615 1639 613 1639 613 1638 614 39879 9202 2239 614
+# 
+# 
+# Intensity increase (1 - 2 - 3 - 4)
+name: Intensity
+type: raw
+frequency: 38000
+duty_cycle: 0.330000
+data: 9208 4511 586 558 585 556 587 556 587 555 588 556 587 556 587 554 589 556 587 1665 586 1663 588 1663 588 1665 586 1664 587 1665 586 1664 587 1664 587 1664 587 557 585 1663 588 1663 588 555 587 556 587 555 587 555 587 555 587 1663 588 555 588 555 588 1665 586 1664 587 1664 587 1664 586 39907 9187 2240 586
+# 
+# 
+# 3 different modes to choose from
+name: Mode
+type: parsed
+protocol: NEC
+address: 00 00 00 00
+command: 43 00 00 00
+# 
+# 
+# Rotate fan (on - off)
+name: Rotate_Toggle
+type: parsed
+protocol: NEC
+address: 00 00 00 00
+command: 44 00 00 00
+# 
+# 
+# Auto-shutoff timer (1hr - 2hr - 4hr - 8hr - off)
+name: Timer
+type: parsed
+protocol: NEC
+address: 00 00 00 00
+command: 16 00 00 00
